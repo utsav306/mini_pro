@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lab Project: 555 Timer and Its Applications</title>
+<link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+  <!-- <img src="images/back_ground.jpg" alt="background"> -->
+    <header>
+        <h1>Lab Project: 555 Timer and Its Applications</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="#introduction">Introduction</a></li>
+            <li><a href="#theory">Theory</a></li>
+            <li><a href="#experiment1">Experiment 1: Schmitt Trigger</a></li>
+            <li><a href="#experiment2">Experiment 2: Pulse Width Modulation (PWM)</a></li>
+            <li><a href="#experiment3">Experiment 3: Delay Timer</a></li>
+            <li><a href="#results">Results</a></li>
+            <li><a href="#conclusion">Conclusion</a></li>
+            <li><a href="#references">References</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <section id="introduction" >
+          <h2 class="intro" >Introduction</h2>
+
+
+          <!-- <h1>Title 555 timer  and its applications</h1> -->
+
+          <div class="inroduction first">
+
+            <p>We are demonstrating three circuits here
+              <ul>
+                <li>SCHMITT trigger</li>
+                <li>Pulse width modulation </li>
+                <li>	Adjustable auto on off delay timer</li>
+              </ul>
+              <img class="ic_image" src="images/ic_image.jpg" alt="ic_image">
+            <p>Let us discuss the objectives </p>
+              <ol>
+                <li>Smith trigger – Converts a sinusoidal or non-sinusoidal input waveform into a square waveform with a specify voltage threshold.</li>
+                <li>Pulse with modulation (PWM) - It controls the amount of power delivered to a load by varying the width of the output pulse.</li>
+                <li>Delay timer circuit - Is a versatile timer circuit that can be used to create a variety of timing functions.</li>
+              </ol>
+        </section>
+</div>
+<div class="">
+        <section id="theory">
+
+            <h2 class="theory_heading">Theory</h2>
+
+            <!-- <h1>All about 555 timer :</h1> -->
+            <p>The 555 timer is versatile and widely used integrated circuit that can be wise, widely used as a timer, oscillator and flip flop It was first introduced in 1971 by Cygnetics Corporation And is known as the time machine CMOS version of the circuit Like Motorola, MC1455 is widely used.
+            The integrated circuit is a maze of transistors, transistors and dials. The figure below shows us the pin diagram of the IC. And now let us discuss the PINS.</p>
+<ol>
+  <li>Ground Pin – Ground reference voltage, low level at zero volt.</li>
+  <li>Trigger pin - The output of the trigger pin goes high, and a timing interval starts when the input falls below 1/3 Vcc The control voltage deemed two third Vcc by default, if it is left open. In other words, the output pin is high if the trigger is low. The output of the timer totally depends upon the amplitude of the external trigger voltage applied to this pin.</li>
+  <li>Output pin – The output is driven to approximately 1.7 volts below +Vcc or to the ground.</li>
+  <li>Reset pin – A timing interval may be reset by driving this input to the ground but the timing does not begin again until the reset rises above approximately 0.7 Volts.</li>
+  <li>Control pin – Provides controlled access to the internal voltage divider (2/3 Vcc by default).</li>
+  <li>Threshold pin – The timing interval (high output) ends when the voltage at threshold is greater than 2/3 Vcc.</li>
+  <li>Discharge pin – Open collector output when may discharge a capacitor between intervals.</li>
+  <li>Vcc – Supply voltage between +5 V - +15 V.</li>
+</ol>
+    <p>The figure below will help us explain the working operations.</p>
+
+<div class="float_imag">
+
+      <img class="ic_diagram"src="images/ic_diagram.png" alt="ic_diagram">
+<div class="theory">
+
+</div>
+      <p>
+        The voltage divider circuit consists of 3 identical resistors of 5000 Ohm each which creates 2 reference voltages of 1/3 Vcc and 2/3 Vcc, where Vcc is the supply voltage.
+      A comparator compares two analog input voltage at its +ve (non inverting) and -ve(inverting) terminals.<br>
+        Case 1 :  V+ve > V-ve = comparator output is high(1)<br>
+        Case 2 :  V+ve < V-ve = comparator output is low(0) <br>
+            Now, we have 2 comparators,<br>
+            The upper comparator : non-inverting(+ve) -> Threshold pin <br>
+                      Inverting(-ve) -> 2/3 Vcc <br>
+            The lower comparator : non-inverting(+ve) -> 1/3 Vcc <br>
+                      Inverting(-ve) ->Trigger pin <br>
+            Using Trigger, Threshold & Control pin, we can control the output of the comparator which is then fed to the R-S Flip-flop the generates the output based in the table <br></p>
+            <table>
+            <thead><th>S	R	Qn	Qn+1</th></thead>
+            <tbody>
+            <tr><td>0	0	0/1	0/1</td></tr>
+            <tr><td>0	1	0/1	0/1</td></tr>
+            <tr><td>1	0	0/1	0/1</td></tr>
+            <tr><td>1 1	0/1	0/1</td></tr></tbody>
+            </table>
+
+            <p>The output of the flip-flop is connected to a transistor that acts as a switch providing high current & low impedance output that can drive external loads. When the output of the R-S Flip-flop is high, the transistor turns on and ve-versa.</p>
+</div>
+</div>
+</div>
+<div class="exp_1">
+
+
+        </section>
+
+        <section id="experiment1">
+            <h2>Experiment 1: Schmitt Trigger</h2>
+            <p>Diagram of Schmitt Trigger:</p>
+            <img src="schmitt_trigger_diagram.jpg" alt="Schmitt Trigger Diagram">
+
+            <!-- details of schitt_tigger -->
+
+
+            <h1>SCHMITT TRIGGER</h1>
+
+            <h1>ASTABLE working mode of the 555 timer .</h1>
+            <p>Astable mode is used to generate continuous stream of pulses. The Schmitt trigger is used to provide hysteresis to the input signal. Let us see the functional diagram to understand the working.<br>
+            •	Pin 2 and 6 are shorted and a sine wave is fed through capacitor.<br>
+            •	Reference voltage of pin 5 (2/3 Vcc) give external voltage to change pulse width <br>
+            •	Pin 4 is connected to Vcc through a resistor and give negative pulses to prevent reset.<br>
+            Principles of operation <br>
+            <p>1.	As R1=R2, voltage drop for both resistors will be Vcc/2.<br>
+            2.	Initially for the first comparator,<br>
+
+            For the 2nd comparator,<br>
+            <p>Vinverting > Vnon-inverting. Or we can say 2/3 Vcc > ½ Vcc. <br>
+            Vinverting > Vnon-inverting. Or we can say ½ Vcc > 1/3 Vcc. <br>
+            So, for the flip-flop s->0 & r->0 <br>
+            3.	Let us take an input sine wave with reference voltage 0, it will be shifted by +Vcc/2 dc voltage. We know,<br>
+            Lower comparator o/p -> 1 (Vpin-2 < 1/3 Vcc) <br>
+            Upper comparator o/p -> 1 (Vpin-6 > 2/3 Vcc) <br>
+            4.	State 1: <br>
+            S=0 , R=0, Qn = as previous.<br>
+            State 2:<br>
+            For the upper comparator, <br>
+             Vinverting = 2/3 Vcc <br>
+            Vnon-inverting >= 2/3 Vcc <br>
+            For the lower comparator,        <br>
+             Vinverting = 1/3 Vcc       <br>
+               Vnon-inverting >= 2/3 Vcc or > 1/3 Vcc <br>
+            Therefore, we have S=1, R=0, Qn=1 & Qn’=0(output) <br>
+            State 3: <br>
+            For the upper comparator,       <br>
+             Vinverting = 2/3 Vcc <br>
+            Vnon-inverting < 1/3 Vcc or < 2/3 Vcc <br>
+            For the lower comparator,           <br>
+              Vinverting < 1/3 Vcc     <br>
+                 Vnon-inverting = 1/3 Vcc <br>
+            Therefore, we have S=0, R=1, Qn=0 & Qn’=1(output) <br>
+
+            Thus, the circuit turns on and off based on the sine wave. On when voltage < 1/3 Vcc and off when voltage > 2/3 Vcc.</p>
+
+            <h1>RESOURE UTILISATION.</h1>
+            <p>Sl no.	name	specs	quantity <br>
+
+            1	555 timer 	4.5 – 18 V supply	1 <br>
+            2	DC source	9 V cell	1 <br>
+            3	CRO	30MHz dual beam	1 <br>
+            4	Function generator	0.3 Hz to 3MHz frequency	1 <br>
+            5	Breadboard 		1 <br>
+            6	Capacitor 	0.01 uF	2 <br>
+            7	Resistors 	10000 Ohm	2 <br>
+            8	Wires 		10-12 <br> </p>
+
+            <h1>IMPLEMENTATION</h1>
+
+            <p>Applied voltage = +5 V <br>
+            Width of the output pulse = 2/3Vcc – 1/3 Vcc <br>
+            					= 10/3 *5 – 1/3*5 <br>
+            					= 1.6 V (peak to peak) </p>
+
+            <h1>PCB DESIGN ARE INCLUDED BELOW</h1>
+
+            <h1>CRITAL ISSUES</h1>
+
+            <p>1.	Low tolerance of the lab equipment that affect the performance of the Schmitt Trigger. <br>
+            2.	Signal noise – Schmitt Trigger is sensitive to noise and interference of the input sine wave from the function generator. <br>
+            3.	Oscillations and instability – Schmitt trigger can oscillate and become unstable if the feedback network does not have sufficient gain and phase margin.
+            </p>
+
+            <h1>CONCLUSION</h1>
+            <p>
+            We have successfully designed the Schmitt Trigger as we have observed a proper pulsating waveform in the CRO.
+            We acquired the knowledge that Schmitt Trigger is a very useful device as it can provide hysteresis and signal conditioning.</p>
+            <p>Some of its application are : <br>
+            a)	Switch de-bouncing : ensures certain circuits respond only to certain valid signals, eliminating false triggers.<br>
+            b)	Signal conditioning : analog signals are conditioned thereby detecting threshold, shifting levels etc.<br>
+            c)	Thermistor : a temperature sensitive circuit.</p>
+
+
+        </section>
+      </div>
+
+        <section id="experiment2">
+            <h2>Experiment 2: Pulse Width Modulation (PWM)</h2>
+            <p>Diagram of Pulse Width Modulation (PWM):</p>
+            <img src="pwm_diagram.jpg" alt="PWM Diagram">
+
+            <!-- Details of PWM -->
+
+            <h1>PULSE WIDTH MODULATION</h1>
+
+            <h2>ASTABLE WORKING MODE of 555 Timer</h2>
+            <p>
+            The astable mode of the 555 timer  is a commonly used configuration where the  operates as an oscillator, generating a stream of square wave pulses. In this mode, the  does not require any external triggering and can generate a train of pulses with a fixed frequency and duty cycle.
+            The astable mode of operation requires 2 external resistors R1 & R2 and a capacitor C as shown in the figure below.</p>
+
+            <h4>PRINCIPLES OF OPERATION</h4>
+            <p>
+            1.	When power is applied to the circuit, 555 timer starts in a state where the output is low and the capacitor C1 is un-charged. <br>
+            2.	The output of the  is connected to a voltage divider formed by R1 & R2 which sets the threshold and trigger levels of the timer. When the voltage reaches the threshold level, the output of the  changes to high.<br>
+            3.	The capacitor C1 charges through R1 & R2. When voltage across C1 is at trigger level, the output switches from high to low. <br>
+            4.	The capacitor C1 discharges through R2 and the discharge pin of the . The cycle repeats to generate a square wave output. </p>
+
+            <h1>CALCULATIONS</h1>
+            <p>
+            1.	Duty cycle : controlled by voltage divider circuit <br>
+            •	T = Thigh + Tlow <br>
+            •	Duty cycle = (Thigh /T)*100 </p>
+            <p>
+            2.	Time period : <br>
+            •	Ton = 0.693*(R1+R2)*C <br>
+            •	T= Toff+Ton <br>
+            •	Frequency F = 1/T = 1.44/[(R1+R2)*C] Hz <br>
+            For the circuit that we have designed, we have chosen the following components : <br>
+            R1 = 1000 Ohm <br>
+            R2 = 10000 Ohm <br>
+            C = 47 uF <br>
+
+            <h4>Calculated value</h4>
+            <h5>
+
+            1.	Ton = 0.693*(1000+10000)*47*10-6    = 358ms <br>
+
+            2.	Toff  = 0.693*10000*47*10-6        = 326ms <br>
+
+            3.	T = Ton + Toff  = 684 ms	Observed value <br>
+
+            1.	Ton = 4 small divisions   = 400ms <br>
+
+            2.	Toff  = 3 small divisions = 300ms <br>
+
+            3.	T = Ton + Toff  = 700 ms <br>
+
+            Error = 16/700 * 100 = 2.258 % </h5>
+
+            <h1>RESOURCE UTILISATION</h1>
+            <p>
+            Sl no.	name	specs	quantity <br>
+
+            1	555 timer 	4.5 – 18 V supply	1 <br>
+            2	DC source	9 V cell	1 <br>
+            3	DSO		1 <br>
+            4	Momentary push button switch		1 <br>
+            5	Breadboard 		1 <br>
+            6	Capacitor 	100 nF, 47 uF	1 of each <br>
+            7	Resistors 	470 Ω ,1 kΩ, 10 k Ω , 22k Ω	1 of each <br>
+            8	Wires 		15 <br>
+            9	Potentiometer 	Max resistance = 60 k Ω	1 <br>
+            10	LED light	Any colour	1 </p>
+
+            <h1>IMPLEMENTATION :</h1>
+            <p>
+            The pictures are in order of the following : <br>
+            1.	PWM circuit with fixed R2 <br>
+            2.	Output square waveform of fig 1. <br>
+            3.	PWM circuit with potentiometer <br>
+            4.	Output square waveform along with the charging and discharging of the capacitor <br>
+            a)	Ton=Toff <br>
+            b)	Ton< Toff <br>
+            c)	Ton >Toff <br>
+            PCB Designs : after the implementations there are the PCB designs of the circuit along with the schematics of …... <br>
+            a)	 PWM with fixed R2 <br>
+            b)	PWM with potentiometer <br>
+
+            <h1>CRITAL ISSUES</h1>
+            <h5>
+            1.	Low tolerance of the lab equipment, it is essential to use high quality materials for more accurate output. <br>
+            2.	Output voltage limitations – for loads that require high voltages, we need additional amplification or voltage regulator circuits. <br>
+            3.	Output current limitations – output current of a few mA is not sufficient for most loads. We need additional buffer or driver circuits to boost the current output </h5>
+
+            <h2>CONCLUSION</h2>
+            <p>
+            We have observed in the calculation table that our observed output is almost identical to the calculated values.
+            Hence, we conclude that our design and implementations were successful. <br>
+            We came to know that 555 Timer  can be used to generate PWM signals and find application in : <br>
+            a)	Motor Speed control <br>
+            b)	Light brightness control <br>
+            c)	Power management </p>
+
+        </section>
+
+        <section id="experiment3">
+            <h2>Experiment 3: Delay Timer</h2>
+            <p>Diagram of Delay Timer:</p>
+            <img src="delay_timer_diagram.jpg" alt="Delay Timer Diagram">
+
+            <!-- Details of Delay_timer -->
+
+            <h2>ADJUSTABLE AUTO ON-OFF DELAY TIMER</h2>
+            <p>
+            Monostable working mode of the 555 timer IC
+            Monostable mode of the 555 timer IC is also called a single shot mode. In this mode, only one state is stable and the other is unstable. An external trigger is required for transition from stable to un-stable state.
+            This external trigger is provided by connecting Trigger pin to the ground via a switch.
+            The monostable working mode is depicted in the figure below.</p>
+
+            <h4>Principles of operation</h4>
+            <p>
+            Delay timer is activated by pressing the push button switch. <br>
+            1.	0 Volt is applied at pin 2(Trigger) via a switch. <br>
+            2.	Voltage at pin 2 < 1/3 Vcc -> output turns on. </p>
+            <p>
+            Discharge pin is disconnected simultaneously, internally from 0 V.
+            3.	Now the capacitor starts to charge via the resistance or the potentiometer via the +ve rail. <br>
+            4.	Threshold(pin 6) connected to the +ve terminal of the capacitor actively monitors the voltage across it. <br>
+            5.	Capacitor charges from 0 V to 2/3 Vcc -> Pin 6 turns off. <br>
+            6.	The time elapsed while the capacitor charges from 0 V to 2/3 Vcc is called the ‘Delay time’. <br>
+            7.	As soon as Pin 6(output) turns off, Pin 7 is internally connected to 0 V and the capacitor discharges completely. <br>
+            These steps are repeated every time the switch is pressed.</p>
+
+            <h2>Calculations</h2>
+            <p>
+            Time taken by the capacitor to charge from 0 V to 2/3 Vcc is given by <br>
+                    T = 1.1 * R*C <br>
+            For the circuit we designed, we have chosen the following values.<br>
+            R = 22 k Ω <br>
+            C = 470 uF </p>
+            <h2>Calculated delay time</h2>
+            <p>
+
+            T = 1.1 * 22 * 103 * 470 * 10-6 <br>
+            = 11.374 s <br>
+                    	Observed delay time <br>
+
+            T = 13.37 s (stop clock value) <br>
+
+            Error = (13.37-11.374)/11.374 = 17.54 % </p>
+
+            <h2>RESOURCE UTILISATION</h2>
+            <table>
+              <thead>
+                <th>Sl no.</th><th>name</th><th>specification</th> <th>quantity</th>
+              </thead>
+             <tbody>
+            <tr> <td>1</td> <td>555 timer</td> <td>4.5 V supply</td> <td>1</td> </tr>
+            <tr> <td>2</td> <td>DC Source</td> <td>9 V cell</td> <td>1</td> </tr>
+            <tr> <td>3</td> <td>DSO</td> <td> </td> <td>1</td> </tr>
+            <tr> <td>4</td> <td>Momentary push button switch</td> <td>1</td> </tr>
+            <tr> <td>5</td> <td>Breadboard</td> <td> </td> <td>1</td> </tr>
+            <tr> <td>6</td> <td>capacitor </td> <td>470 uF</td> <td>1</td> </tr>
+            <tr> <td>7</td> <td>Resistors </td> <td>470 Ω , 10 k Ω , 22k Ω, 68 kΩ</td> <td>1 of each</td> </tr>
+            <tr> <td>8</td> <td>Wires</td> <td> </td> <td>15</td> </tr>
+            <tr> <td>9</td> <td>LED light Any colour</td> <td>1</td> </tr>
+              </tbody>
+            </table>
+
+            <h2>Implementation</h2>
+            <p>
+            You can observe the circuit in the following part. <br>
+            In the circuit, we have chosen a fixed capacitor of 470 uF (due to unavailability) and we have varied the resistance to obtain various timing delays. Some of the common time delays are : <br>
+
+            <table>
+              <thead>
+                <th>R (k Ω)</th>
+                <th>C (uF)</th>
+                <th>Time Delay</th>
+              </thead>
+              <tbody>
+                <tr><td>33</td> <td>470</td><td>15s</td> </tr>
+                <tr><td>68</td> <td>470</td> <td>30s</td> </tr>
+                <tr><td>122</td> <td>470</td> <td>1 min</td> </tr>
+                <tr><td>320</td> <td>470</td><td>2.5 min</td>  </tr>
+                <tr><td>800</td> <td>470</td> <td>7.5 min</td> </tr>
+              </tbody>
+            </table>
+            <h2>PCB design are below :</h2>
+
+            <h4>Critical issues :</h4>
+
+            <p>
+            Problems encountered in the laboratory are : <br>
+            1.	Component selection : unavailability of varying capacitance. <br>
+            2.	Caliberation : Tedious process to caliberate the circuit properly to obtain perfect time delay. <br>
+            3.	Circuit layout : Long traces or poor grounding can introduce noise and cause instability. </p>
+
+            <h2>Conclusion</h2>
+            <p>
+            We have observed that the time calculated theoretically and the stop-watch value is quite similar. Hence, we can conclude that the design is correct. However, its important to note the fact that error in our observation is due to the factors like component tolerance, external temperature and others.
+            We also learnt that delay timer find application in various industries and electronics like : <br>
+            a)	HVAC – Heating, ventilation and air-conditioning controls. <br>
+            b)	Motor control – like that in a washing machine. </p>
+
+        </section>
+
+        <section id="results">
+            <h2>Results</h2>
+
+            <!-- Results -->
+
+        </section>
+
+        <section id="conclusion">
+            <h2>Conclusion</h2>
+<!-- conclusion -->
+
+        </section>
+
+        <section id="references">
+            <h2>References</h2>
+
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 A2_Project. All rights reserved.</p>
+    </footer>
+</body>
+</html>
