@@ -26,10 +26,12 @@ nav ul {
     padding: 0;
     background-color: #f2f2f2;
     overflow: hidden;
+
 }
 
 nav ul li {
     float: left;
+    z-index: 10;
 }
 
 nav ul li a {
@@ -38,6 +40,8 @@ nav ul li a {
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    z-index: 10;
+
 }
 
 nav ul li a:hover {
@@ -45,9 +49,9 @@ nav ul li a:hover {
 }
 
 
-main {
+/* main {
     padding: 20px;
-}
+} */
 
 h2 {
     margin-top: 0;
@@ -71,34 +75,156 @@ footer {
 
 
 .inroduction{
-  line-height:1.5;
+  line-height:1.25;
+  font-size: 1.25rem;
+  padding: 30px 50px;
 }
 
 .ic_image{
+
+z-index: 2;
+float: right;
   height:200px;
   width: 300px;
-  position: absolute;
-  right: 150px;
-  top:150px;
+  position: relative;
+  bottom:  175px;
+  right: 50px;
 
 }
-.theory{
-  line-height: 50px;
-}
-p{
-  line-height: 1.5;
-}
-li{
-  line-height: 1.5;
-}
-.ic_diagram{
-  height: 350px;
-  width: 400px;
+
+
+.ic_circuit{
+  margin: 0px 30px;
+  border: 2px solid black;
+  height: 290px;
+  width: 300px;
   background-color: white;
+  float:left;
 }
-.ic_diagram{
-  float: left;
+.ex1heading{
+  text-align: center;
+}
+.table1{
+  margin-left:  auto;
+  margin-right: auto;
+  width: 25%;
+
+}
+table,th,td{
+  border:1px solid;
+
+}
+td,th{
+  text-align: center;
+}
+.astable_working{
+  height: 400px;
+  width: 350px;
+  border: 2px solid black;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-top:50px;
+  float: right;
+
+}
+.ex1{
+  line-height: 50px;
+  /* padding: 30px 50px; */
+  margin:0px;
+}
+.ex1_theory{
+  line-height: 1.5;
+  padding: 15px;
+  margin:0px;
+}
+.resourceHeading{
+  text-align: center;
+  line-height: 1.5;
+}
+.resourceTable{
+  margin:auto;
+  width: 50%;
+}
+.navContainer{
+  position: sticky;
+  top:0px;
+  background-color: red;
+}
+.aritra{
+  float: right;
+  height: 400px;
+  width: 600px;
+  padding-right: 50px;
+}
+.heading{
+  text-align: center;
+  padding: 20px 20px;
+  color: #C3EDC0;
+}
+.sub_heading{
+  color: #99FEFF;
+  padding: 10px 30px;
 }
 .theory{
-  margin-left: 50px;
+  padding:30px 50px;
+  font-size: 1.25rem;
+}
+.list_elemets{
+  padding-left: 40px;
+}
+.floating_container{
+  font-size: 1.10rem;
+}
+
+.para{
+  margin: 0px;
+  padding:25px 30px;
+  font-size: 1.25rem;
+}
+.flex_container{
+  display: flex;
+  justify-content: space-evenly;
+
+}
+.exp1_image{
+  height: 300px;
+  width: 350px;
+  /* padding: 20px 0px; */
+  /* gap:20px; */
+}
+#exp_1{
+
+  margin: 0px 0px;
+}
+.exp1_theory{
+  padding:30px 50px;
+  font-size: 1.25rem;
+
+}
+.sub_heading > p {
+  padding: 30px 50px;
+}
+.exp1_pcb{
+  height: 400px;
+  /* width: 700px; */
+}
+.flex{
+
+margin: auto;
+padding: 0 25%;
+z-index: 0;
+}
+#exp_2{
+  margin: 0px 0px;
+}
+#exp_2 > p {
+  padding: 30px 50px;
+  font-size: 1.25rem;
+}
+/* main{
+  margin:0px 0px;
+} */
+#table{
+  padding-left: 25%;
+
 }
