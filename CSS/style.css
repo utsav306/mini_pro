@@ -1,26 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@500&family=Roboto:wght@300;500&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Courgette&family=Poppins:wght@500&family=Roboto:wght@300;500&display=swap');
+
+
+
+
 body {
-    font-family: Arial, sans-serif;
+  font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
-    background-image: url("images/back_ground.jpg");
+    background-image: url("images/bg.jpg");
     background-size: cover;
     background-position: center;
 }
 
 
-header {
+/*header {
     background-color: #333;
     color: #fff;
     padding: 20px;
     text-align: center;
+}*/
+.btn {
+  padding: .45rem 1.5rem .35rem;
 }
 
-h1 {
+.gradient-custom {
+  /* fallback for old browsers */
+  background-color: #045de9;
+  background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
+
+  /* Chrome 10-25, Safari 5.1-6 */
+  
+}
+
+h2 {
     margin: 0;
+    color: violet;
 }
 
 
-nav ul {
+
+
+
+
+
+
+
+
+
+/*nav ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
@@ -47,11 +76,41 @@ nav ul li a {
 nav ul li a:hover {
     background-color: #ddd;
 }
-
+*/
 
 /* main {
     padding: 20px;
 } */
+
+
+/* Navigation Bar */
+.navbar{
+  padding: 20px 10px 20px 0px;
+  background-color: #28a7e9;
+  transition: all ease 0.4s;
+}
+.navbar-brand{
+  font-size: 22px;
+  color: white !important;
+}
+.navbar .navbar-nav li a{
+  font-size: 16px;
+  color: white;
+}
+
+/* Animation */
+.animate{
+  padding: 0px 10px 0px 0px;
+  transition: all ease 0.4s;
+}
+
+/* Jumbotron */
+.jumbotron{
+  margin-top: 110px;
+}
+
+
+
 
 h2 {
     margin-top: 0;
@@ -217,14 +276,130 @@ z-index: 0;
 #exp_2{
   margin: 0px 0px;
 }
-#exp_2 > p {
-  padding: 30px 50px;
-  font-size: 1.25rem;
-}
+
 /* main{
   margin:0px 0px;
 } */
 #table{
   padding-left: 25%;
 
+}
+
+
+
+
+#first_back h1
+{
+  color: blueviolet;
+  font-family: 'Poppins', sans-serif;
+  text-decoration-line: underline;
+  font-size: 4rem;
+}
+#first_back h2
+{
+  color: purple;
+  font-size: 2.5rem;
+  font-family: 'Poppins', sans-serif;
+  text-decoration-line: underline;
+}
+
+
+
+
+
+#exp_1 h3
+{
+  color: purple;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  
+}
+#exp_1 h1{
+  color: blueviolet;
+  font-family: 'Poppins', sans-serif;
+  font-size: 4rem;
+  text-decoration-line: underline;
+}
+
+#exp_1 p{
+  text-align: center;
+
+}
+
+
+
+
+#exp_2 h3
+{
+  color: purple;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2rem;
+  text-decoration-line: underline;
+  margin-bottom: 1rem;
+  margin-top: 2rem;
+ display: flex;
+ align-items: center;
+
+}
+#exp_2 h2{
+  color: blueviolet;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  text-decoration-line: underline;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+
+}
+
+#exp_2 p{
+  text-align: center;
+  padding-left: 3rem;
+  font-size: 1.25rem;
+  padding-right: 3rem;
+  
+}
+#exp_2 {
+  padding-left: 2rem;
+  padding-right: 1rem;
+
+}
+#exp_2 li{
+  font-size: 1.25rem;
+}
+
+
+
+#exp_3 h2
+{
+  color: purple;
+  font-family: 'Poppins', sans-serif;
+  font-size: 2.3rem;
+  text-decoration-line: underline;
+  margin-bottom: 2rem;
+  text-align: center;
+  margin-top: 2rem;
+
+}
+#exp_3 h1{
+  color: blueviolet;
+  font-family: 'Poppins', sans-serif;
+  font-size: 3rem;
+  text-decoration-line: underline;
+  margin-bottom: 2rem;
+  padding-top: 2rem;
+}
+#exp_3 p{
+  padding-left: 3rem;
+  text-align: center;
+  padding-right: 1.5rem;
+}
+#exp_3 li{
+  padding-left: 3rem;
+  text-align: center;
+  padding-right: 3rem;
+}
+
+#exp_3 .imple table{
+  
+  margin-left: 43%;
 }

@@ -9,40 +9,42 @@
 
     <!-- Bootstrap_CDN_link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js" integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous"></script>
     <!-- My_css_file_link -->
     <link rel="stylesheet" href="CSS/style.css">
 
     <style media="screen">
       #first_back{
-        background-image: url("images/back4.jpg");
+        background-image: url("images/home.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        color: #EEE3CB;
+        color: black;
         margin: 0px;
         padding: 0px;
+        
       }
       #exp_1{
-        background-image: url("images/rename1.jpg");
-        background-repeat: no-repeat;
-        background-size: cover;
+        background-color: #aee1f9;
+background-image :linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
+
+        
+    
         color: black;
 
       }
       #exp_2{
-        background-image: url("images/back1.jpg");
+        background-color: #fde7f9;
+background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
+
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
-        color: #EEE3CB;
+        color: black;
         /* margin: 0px;
         padding: 0px; */
       }
       #exp_3{
-        background-image: url("images/back22.jpg");
+        background-image: url("images/exp3.jpg");
         background-repeat: no-repeat;
         background-size: cover;
         background-attachment: fixed;
@@ -61,59 +63,57 @@
 
 <body>
 
-    <header>
-        <h1>Lab Project: 555 Timer and Its Applications</h1>
-    </header>
-
-    <nav class="navbar navbar-expand-lg bg-light">
+   
+   
+<!-- Navigation Bar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#introduction">555_Timer</a>
+    <a class="navbar-brand" href="#">DBook Inc</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse" id="navbarNavDropdown">
-      <ul class="navbar-nav">
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#exp_1" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Schmitt Tigger
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#exp_2">Theory</a></li>
-            <li><a class="dropdown-item" href="#"></a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
-        <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Pulse Width Modulation
-          </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
-          </ul>
-        </li>
 
+    <div class=" collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav ms-auto ">
+        <li class="nav-item">
+          <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="#">Products</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link mx-2" href="#">Pricing</a>
+        </li>
         <li class="nav-item dropdown">
-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Delay Timer
+          <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Company
           </a>
-          <ul class="dropdown-menu">
-            <li><a class="dropdown-item" href="#">Action</a></li>
-            <li><a class="dropdown-item" href="#">Another action</a></li>
-            <li><a class="dropdown-item" href="#">Something else here</a></li>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">Contact us</a></li>
           </ul>
+        </li>
+      </ul>
+      <ul class="navbar-nav ms-auto d-none d-lg-inline-flex">
+        <li class="nav-item mx-2">
+          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-google-plus-square"></i></a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-twitter"></i></a>
+        </li>
+        <li class="nav-item mx-2">
+          <a class="nav-link text-dark h5" href="" target="blank"><i class="fab fa-facebook-square"></i></a>
         </li>
       </ul>
     </div>
   </div>
 </nav>
-
-    <main>
+ <main>
 
     <div id="first_back">
         <!-- <section id="introduction" > -->
-          <h2 class="intro heading"  >Introduction</h2>
+          <h1  class="intro heading" >Introduction</h1>
 
 
           <!-- <h1>Title 555 timer  and its applications</h1> -->
@@ -244,7 +244,7 @@
 <div id="exp_1">
         <!-- </section> -->
         <!-- <section id="experiment1"> -->
-            <h2 class="ex1heading heading">Experiment 1: Schmitt Trigger</h2>
+            <h1 class="ex1heading heading">Experiment 1: Schmitt Trigger</h1>
 
 <div class="">
   <img class="astable_working" src="images/Picture1.png" alt="ADJUSTABLE">
@@ -297,7 +297,7 @@
 
           </div>
 
-            <h4 class="resourceHeading sub_heading">RESOURE UTILISATION.</h4>
+            <h3 class="resourceHeading sub_heading">RESOURE UTILISATION.</h3>
             <table class="resourceTable">
               <thead>
                 <th>Sl no.</th>
@@ -317,7 +317,7 @@
               </tbody>
             </table>
 
-            <h4 class="sub_heading">IMPLEMENTATION</h4>
+            <h3 class="sub_heading">IMPLEMENTATION</h3>
             <div class="">
               <p>Applied voltage = +5 V <br>
               Width of the output pulse = 2/3Vcc – 1/3 Vcc <br>
@@ -336,35 +336,31 @@
               </div>
             </div>
 
-            <h4 class="sub_heading">PCB DESIGN ARE INCLUDED BELOW</h4>
+            <h3 class="sub_heading">PCB DESIGN ARE INCLUDED BELOW</h3>
             <p>Here is the following PCB design for the schmitter trigger</p>
 
-            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="false">
-  <div class="carousel-indicators">
-  </div>
-  <div class="carousel-inner flex">
-    <div class="carousel-item active">
-      <img class="exp1_pcb"src="images/pwm_pcb_fornt.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-        <p>Front side of the PCB design.</p>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <img class="exp1_pcb" src="images/pwm_pcb_rear.jpg" class="d-block w-100" alt="...">
-      <div class="carousel-caption d-none d-md-block">
-      </div>
-      <p>Rear side of the PCB design.</p>
-    </div>
-
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+            <div id="carouselExample" class="carousel slide">
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img src="images/555.png"  style="margin-left:30% ;" alt="..." width="600" height="450">
+                </div>
+                <div class="carousel-item active">
+                  <img src="images/555.png"  style="margin-left:30% ;" alt="..." width="600" height="450">
+                </div>
+                <div class="carousel-item active">
+                  <img src="images/555.png"  style="margin-left:30% ;" alt="..." width="600" height="450">
+                </div>>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+            
             <!-- <div class="">
               <div class="">
                 <img src="" alt="Front">
@@ -374,18 +370,18 @@
               </div>
             </div> -->
 
-            <h4 class="sub_heading">CRITAL ISSUES</h4>
+            <h3 class="sub_heading">CRITAL ISSUES</h3>
          <ol>
               <li>Low tolerance of the lab equipment that affect the performance of the Schmitt Trigger.</li>
               <li>Signal noise – Schmitt Trigger is sensitive to noise and interference of the input sine wave from the function generator.</li>
               <li>Oscillations and instability – Schmitt trigger can oscillate and become unstable if the feedback network does not have sufficient gain and phase margin.</li>
           </ol>
 
-            <h4 class="sub_heading">CONCLUSION</h4>
+            <h3 class="sub_heading">CONCLUSION</h3>
             <p>
             We have successfully designed the Schmitt Trigger as we have observed a proper pulsating waveform in the CRO.
             We acquired the knowledge that Schmitt Trigger is a very useful device as it can provide hysteresis and signal conditioning.Some of its application are : </p>
-            <ol>
+            <ol style="margin-bottom: 0%;">
               <li>Switch de-bouncing : ensures certain circuits respond only to certain valid signals, eliminating false triggers.</li>
               <li>Signal conditioning : analog signals are conditioned thereby detecting threshold, shifting levels etc.</li>
               <li>Thermistor : a temperature sensitive circuit.</li>
@@ -405,7 +401,7 @@
             The astable mode of the 555 timer  is a commonly used configuration where the  operates as an oscillator, generating a stream of square wave pulses. In this mode, the  does not require any external triggering and can generate a train of pulses with a fixed frequency and duty cycle.
             The astable mode of operation requires 2 external resistors R1 & R2 and a capacitor C as shown in the figure below.</p>
 
-            <h4 class="sub_heading">PRINCIPLES OF OPERATION</h4>
+            <h3 class="sub_heading">PRINCIPLES OF OPERATION</h3>
             <div class="">
               <div class="">
                 <ol>
@@ -420,20 +416,20 @@
             </div>
 
             <h3 class="sub_heading">CALCULATIONS</h3>
-            <ol>
-              <li>Duty cycle : controlled by voltage divider circuit </li>
-              <ul>
-                <li>T = Thigh + Tlow</li>
-                <li>Duty cycle = (Thigh /T)*100</li>
-              </ul>
-              <li>Time period :</li>
-              <ul>
-                <li>Ton = 0.693*(R1+R2)*C  </li>
-                <li>T= Toff+Ton</li>
-                <li>Frequency F = 1/T = 1.44/[(R1+R2)*C] Hz</li>
-              </ul>
-            </ol>
-
+            <p>
+              Duty cycle : controlled by voltage divider circuit <br>
+              
+                T = Thigh + Tlow<br>
+                Duty cycle = (Thigh /T)*100<br>
+              
+              Time period :<br>
+            
+                Ton = 0.693*(R1+R2)*C<br>
+                T= Toff+Ton<br>
+                Frequency F = 1/T = 1.44/[(R1+R2)*C] <br>
+              
+            
+          </p>
 
             <h3 class="sub_heading">RESOURCE UTILISATION</h3>
             <table>
@@ -528,7 +524,7 @@
             <p>We have observed in the calculation table that our observed output is almost identical to the calculated values.<br>
             Hence, we conclude that our design and implementations were successful.<br>
             <p>We came to know that 555 Timer  can be used to generate PWM signals and find application in :</p>
-             <ol>
+             <ol style="margin: 0;">
                <li>Motor Speed control</li>
                <li>Light brightness control</li>
                <li>Power management</li>
@@ -539,7 +535,7 @@
 
 
         <!-- <section id="experiment3"> -->
-            <h2 class="heading">Experiment 3: Delay Timer</h2>
+            <h1 class="heading">Experiment 3: Delay Timer</h1>
             <p>Diagram of Delay Timer:</p>
             <img src="delay_timer_diagram.jpg" alt="Delay Timer Diagram">
 
@@ -552,7 +548,7 @@
             This external trigger is provided by connecting Trigger pin to the ground via a switch.
             The monostable working mode is depicted in the figure below.</p>
 
-            <h4 class="sub_heading">Principles of operation</h4>
+            <h2 class="sub_heading">Principles of operation</h2>
             <p>
             Delay timer is activated by pressing the push button switch. <br>
             1.	0 Volt is applied at pin 2(Trigger) via a switch. <br>
@@ -605,6 +601,8 @@
               </tbody>
             </table>
 </div>
+
+<div class="imple">
             <h2 class="sub_heading">Implementation</h2>
             <p>
             You can observe the circuit in the following part. <br>
@@ -624,24 +622,26 @@
                 <tr><td>800</td> <td>470</td> <td>7.5 min</td> </tr>
               </tbody>
             </table>
+            </p>
+          </div>
             <h2 class="sub_heading">PCB design are below :</h2>
 
-            <h4 class="sub_heading">Critical issues :</h4>
+            <h2 class="sub_heading">Critical issues :</h2>
 
             <p>Problems encountered in the laboratory are :</p>
-             <ol>
-               <li>Component selection : unavailability of varying capacitance.</li>
-               <li>Caliberation : Tedious process to caliberate the circuit properly to obtain perfect time delay.</li>
-               <li>Circuit layout : Long traces or poor grounding can introduce noise and cause instability.</li>
-             </ol>
+             <p>
+               1. Component selection : unavailability of varying capacitance.<br>
+               2. Caliberation : Tedious process to caliberate the circuit properly to obtain perfect time delay.<br>
+               3. Circuit layout : Long traces or poor grounding can introduce noise and cause instability.<br>
+             </p>
 
             <h2 class="sub_heading">Conclusion</h2>
             <p>We have observed that the time calculated theoretically and the stop-watch value is quite similar. Hence, we can conclude that the design is correct. However, its important to note the fact that error in our observation is due to the factors like component tolerance, external temperature and others.
             We also learnt that delay timer find application in various industries and electronics like : </p>
-            <ul>
-              <li>HVAC – Heating, ventilation and air-conditioning controls.</li>
-              <li>Motor control – like that in a washing machine.</li>
-            </ul>
+            <p>
+              1. HVAC – Heating, ventilation and air-conditioning controls.<br>
+              2. Motor control – like that in a washing machine.<br>
+            </p>
                 a)	 <br>
             b)	 </p>
 
@@ -671,5 +671,10 @@
     <footer>
         <p>&copy; 2023 A2_Project. All rights reserved.</p>
     </footer>
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    
+
 </body>
 </html>
