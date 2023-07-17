@@ -31,7 +31,7 @@ body {
   background-image: linear-gradient(315deg, #045de9 0%, #09c6f9 74%);
 
   /* Chrome 10-25, Safari 5.1-6 */
-  
+
 }
 
 h2 {
@@ -158,9 +158,15 @@ float: right;
   height: 290px;
   width: 300px;
   background-color: white;
-  float:left;
+
+}
+.iccircuit{
+  float: left;
 }
 .ex1heading{
+  text-align: center;
+}
+.center{
   text-align: center;
 }
 .table1{
@@ -183,8 +189,11 @@ td,th{
   margin-left: 30px;
   margin-right: 30px;
   margin-top:50px;
-  float: right;
 
+
+}
+.circuitschmitt{
+  float: right;
 }
 .ex1{
   line-height: 50px;
@@ -209,7 +218,7 @@ td,th{
   top:0px;
   background-color: red;
 }
-.aritra{
+.astable{
   float: right;
   height: 400px;
   width: 600px;
@@ -267,6 +276,12 @@ td,th{
   height: 400px;
   /* width: 700px; */
 }
+.padding{
+  padding-left: 48px;
+}
+.paddingextra{
+  padding-left:88px;
+}
 .flex{
 
 margin: auto;
@@ -312,7 +327,7 @@ z-index: 0;
   color: purple;
   font-family: 'Poppins', sans-serif;
   font-size: 2rem;
-  
+
 }
 #exp_1 h1{
   color: blueviolet;
@@ -322,7 +337,7 @@ z-index: 0;
 }
 
 #exp_1 p{
-  text-align: center;
+
 
 }
 
@@ -352,11 +367,11 @@ z-index: 0;
 }
 
 #exp_2 p{
-  text-align: center;
+  /* text-align: center; */
   padding-left: 3rem;
   font-size: 1.25rem;
   padding-right: 3rem;
-  
+
 }
 #exp_2 {
   padding-left: 2rem;
@@ -376,7 +391,7 @@ z-index: 0;
   font-size: 2.3rem;
   text-decoration-line: underline;
   margin-bottom: 2rem;
-  text-align: center;
+  /* text-align: center; */
   margin-top: 2rem;
 
 }
@@ -390,16 +405,47 @@ z-index: 0;
 }
 #exp_3 p{
   padding-left: 3rem;
-  text-align: center;
+  /* text-align: center; */
   padding-right: 1.5rem;
 }
 #exp_3 li{
-  padding-left: 3rem;
-  text-align: center;
+  /* padding-left: 3rem; */
+  /* text-align: center; */
   padding-right: 3rem;
 }
 
 #exp_3 .imple table{
-  
+
   margin-left: 43%;
+}
+.exp2_poo{
+  left-padding: 68px;
+}
+.exp2_resource{
+  display:flex;
+  padding-left: 10%;
+}
+.exp2_imple{
+  display: flex;
+  justify-content: center;
+  gap:70px;
+}
+.exp2output{
+  display: flex;
+  gap:50px;
+  justify-content:space-evenly;
+}
+.exp2_output{
+  height: 300px;
+  width: 500px;
+}
+.exp2nopotpcb{
+  display: flex;
+  justify-content: space-evenly;
+  padding-bottom: 100px;
+}
+.delaycircuit{
+  float: right;
+  padding-right: 40px;
+  margin-top:100px;
 }

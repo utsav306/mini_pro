@@ -21,14 +21,14 @@
         color: black;
         margin: 0px;
         padding: 0px;
-        
+
       }
       #exp_1{
         background-color: #aee1f9;
 background-image :linear-gradient(315deg, #aee1f9 0%, #f6ebe6 74%);
 
-        
-    
+
+
         color: black;
 
       }
@@ -57,36 +57,50 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
 
         margin: 0px;
       }
+      .dropdow-menu{
+        color: black;
+      }
     </style>
 
 </head>
 
 <body>
 
-   
-   
+
+
 <!-- Navigation Bar -->
 <nav class="navbar navbar-expand-lg navbar-light bg-info p-3">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">DBook Inc</a>
+    <a class="navbar-brand" href="https://en.wikipedia.org/wiki/555_timer_IC">555_Timer</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
     <div class=" collapse navbar-collapse" id="navbarNavDropdown">
       <ul class="navbar-nav ms-auto ">
-        <li class="nav-item">
-          <a class="nav-link mx-2 active" aria-current="page" href="#">Home</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="#">Products</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link mx-2" href="#">Pricing</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Schmitt Trigger
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">Contact us</a></li>
+          </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Company
+            Pulse Witdh Modulation
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <li><a class="dropdown-item" href="#">Blog</a></li>
+            <li><a class="dropdown-item" href="#">About Us</a></li>
+            <li><a class="dropdown-item" href="#">Contact us</a></li>
+          </ul>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link mx-2 dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Delay Timer
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
             <li><a class="dropdown-item" href="#">Blog</a></li>
@@ -139,14 +153,7 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
       <img src="images/ic555_2.png" class="d-block w-100" alt="...">
     </div>
   </div>
-  <!-- <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleRide" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button> -->
+
 </div>
               <!-- <img class="ic_image" src="images/ic_image.jpg" alt="ic_image"> -->
             <p>Let us discuss the objectives </p>
@@ -185,7 +192,12 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
 <div class="floating_container">
 
 <!-- ic circuit image -->
-      <img class="ic_circuit"src="images/new.png" alt="ic_diagram">
+<div class="iccircuit">
+  <img class="ic_circuit"src="images/new.png" alt="ic_diagram">
+  <p style="text-align:center;">Circuit Diagram</p>
+</div>
+
+
 
 
 
@@ -246,8 +258,9 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
         <!-- <section id="experiment1"> -->
             <h1 class="ex1heading heading">Experiment 1: Schmitt Trigger</h1>
 
-<div class="">
+<div class="circuitschmitt">
   <img class="astable_working" src="images/Picture1.png" alt="ADJUSTABLE">
+  <p class="center">Schmitt Trigger Circuit</p>
 </div>
 
 <div class="exp1_theory">
@@ -263,10 +276,13 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
       <ol>
         <li>As R1=R2, voltage drop for both resistors will be Vcc/2.</li>
         <li>Initially for the first comparator,</li>
+        <ul>
+          <li>Vinverting > Vnon-inverting. Or we can say 2/3 Vcc > ½ Vcc.</li>
+
+        </ul>
       </ol>
           <p>For the 2nd comparator,</p>
           <ul>
-            <li>Vinverting > Vnon-inverting. Or we can say 2/3 Vcc > ½ Vcc.</li>
             <li>Vinverting > Vnon-inverting. Or we can say ½ Vcc > 1/3 Vcc.</li>
           </ul>
             <p>So, for the flip-flop s->0 & r->0 </p>
@@ -275,7 +291,7 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
               <li>Lower comparator o/p -> 1 (Vpin-2 < 1/3 Vcc)</li>
               <li>Upper comparator o/p -> 1 (Vpin-6 > 2/3 Vcc)</li>
             </ul>
-            <p>4.something................</p>
+            <p>4.Let us compare the flip-flop states.</p>
             <ul>
               <li>	State 1:S=0 , R=0, Qn = as previous</li>
               <li>   State 2:For the upper comparator,          </li>
@@ -319,7 +335,7 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
 
             <h3 class="sub_heading">IMPLEMENTATION</h3>
             <div class="">
-              <p>Applied voltage = +5 V <br>
+              <p class="center">Applied voltage = +5 V <br>
               Width of the output pulse = 2/3Vcc – 1/3 Vcc <br>
                         = 10/3 *5 – 1/3*5 <br>
                         = 1.6 V (peak to peak) </p>
@@ -328,28 +344,28 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             <div class="flex_container">
               <div class="">
                 <img class="exp1_image" src="images/exp1_circuit.jpg" alt="Circuit_diagram">
-                <p>Fig.4- Circuit Diagram</p>
+                <p class="center">Fig.4- Circuit Diagram</p>
               </div>
               <div class="">
                 <img class="exp1_image" src="images/exp1_cro.jpg" alt="CRO_output">
-                <p>Fig.5- CRO Output</p>
+                <p class="center">Fig.5- CRO Output</p>
               </div>
             </div>
 
-            <h3 class="sub_heading">PCB DESIGN ARE INCLUDED BELOW</h3>
-            <p>Here is the following PCB design for the schmitter trigger</p>
+            <h3 class="sub_heading ">PCB DESIGN ARE INCLUDED BELOW</h3>
+            <p class="center">Here is the following PCB design for the schmitter trigger</p>
 
             <div id="carouselExample" class="carousel slide">
               <div class="carousel-inner">
                 <div class="carousel-item active">
-                  <img src="images/555.png"  style="margin-left:30% ;" alt="..." width="600" height="450">
+                  <img src="images/schmitt_pcb_front.jpg"  style="margin-left:30% ;" alt="..." width="600" height="450">
                 </div>
                 <div class="carousel-item active">
-                  <img src="images/555.png"  style="margin-left:30% ;" alt="..." width="600" height="450">
+                  <img src="images/schmitt_pcb_rear.jpg"  style="margin-left:30% ;" alt="..." width="600" height="450">
                 </div>
-                <div class="carousel-item active">
+                <!-- <div class="carousel-item active">
                   <img src="images/555.png"  style="margin-left:30% ;" alt="..." width="600" height="450">
-                </div>>
+                </div> -->
               </div>
               <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -360,7 +376,7 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
                 <span class="visually-hidden">Next</span>
               </button>
             </div>
-            
+
             <!-- <div class="">
               <div class="">
                 <img src="" alt="Front">
@@ -371,17 +387,17 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             </div> -->
 
             <h3 class="sub_heading">CRITAL ISSUES</h3>
-         <ol>
+         <ol style="font-size:1.25rem;" class="paddingextra">
               <li>Low tolerance of the lab equipment that affect the performance of the Schmitt Trigger.</li>
               <li>Signal noise – Schmitt Trigger is sensitive to noise and interference of the input sine wave from the function generator.</li>
               <li>Oscillations and instability – Schmitt trigger can oscillate and become unstable if the feedback network does not have sufficient gain and phase margin.</li>
           </ol>
 
             <h3 class="sub_heading">CONCLUSION</h3>
-            <p>
+            <p style="font-size:1.25rem;" class="padding">
             We have successfully designed the Schmitt Trigger as we have observed a proper pulsating waveform in the CRO.
             We acquired the knowledge that Schmitt Trigger is a very useful device as it can provide hysteresis and signal conditioning.Some of its application are : </p>
-            <ol style="margin-bottom: 0%;">
+            <ol style="margin-bottom: 0%;padding-bottom:50px; font-size:1.25rem;" class="paddingextra">
               <li>Switch de-bouncing : ensures certain circuits respond only to certain valid signals, eliminating false triggers.</li>
               <li>Signal conditioning : analog signals are conditioned thereby detecting threshold, shifting levels etc.</li>
               <li>Thermistor : a temperature sensitive circuit.</li>
@@ -393,24 +409,25 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
 
 
         <!-- <section id="experiment2"> -->
+
             <h2 class="heading">Experiment 2: Pulse Width Modulation (PWM)</h2>
 
 
             <h3 class="sub_heading">ASTABLE WORKING MODE of 555 Timer</h3>
-            <p>
+            <p >
             The astable mode of the 555 timer  is a commonly used configuration where the  operates as an oscillator, generating a stream of square wave pulses. In this mode, the  does not require any external triggering and can generate a train of pulses with a fixed frequency and duty cycle.
             The astable mode of operation requires 2 external resistors R1 & R2 and a capacitor C as shown in the figure below.</p>
 
             <h3 class="sub_heading">PRINCIPLES OF OPERATION</h3>
             <div class="">
-              <div class="">
-                <ol>
+              <div class="exp2_poo" style="padding-left:68px;">
+                <ol style="left-padding:68px;">
                   <li>When power is applied to the circuit, 555 timer starts in a state where the output is low and the capacitor C1 is un-charged.</li>
                   <li>The output of the  is connected to a voltage divider formed by R1 & R2 which sets the threshold and trigger levels of the timer. When the voltage reaches the threshold level, the output of the  changes to high.</li>
                   <li>The capacitor C1 charges through R1 & R2. When voltage across C1 is at trigger level, the output switches from high to low.</li>
                   <li>The capacitor C1 discharges through R2 and the discharge pin of the . The cycle repeats to generate a square wave output.</li>
                 </ol>
-                <img class="aritra"src="images/555.png" alt="aritra page 17">
+                <img class="astable"src="images/page17diagram.png" alt="aritra page 17">
 
               </div>
             </div>
@@ -418,20 +435,21 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             <h3 class="sub_heading">CALCULATIONS</h3>
             <p>
               Duty cycle : controlled by voltage divider circuit <br>
-              
+
                 T = Thigh + Tlow<br>
                 Duty cycle = (Thigh /T)*100<br>
-              
+
               Time period :<br>
-            
+
                 Ton = 0.693*(R1+R2)*C<br>
                 T= Toff+Ton<br>
                 Frequency F = 1/T = 1.44/[(R1+R2)*C] <br>
-              
-            
+
+
           </p>
 
             <h3 class="sub_heading">RESOURCE UTILISATION</h3>
+            <div class="exp2_resource">
             <table>
               <thead>
                 <th>Sl no.</th>
@@ -471,30 +489,54 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
               </tr>
               </tbody>
             </table>
+            </div>
 
 
             <h3 class="sub_heading">IMPLEMENTATION :</h3>
             <p>For the circuit that we have designed, we have chosen the following components : </p>
-            <ul>
+            <ul style="padding-left:75px;">
               <li>R1 = 1000 Ohm </li>
               <li>R2 = 10000 Ohm</li>
               <li>C = 47 uF</li>
             </ul>
-             <h4>Calculated value</h4>
+            <div class="exp2_imple" style="border:solid;margin:0px 15%;">
+          <div class="">
+             <h4 style="text-align:center;">Calculated value</h4>
             <ol>
               <li>Ton = 0.693*(1000+10000)*47*10-6    = 358ms</li>
               <li>Toff  = 0.693*10000*47*10-6        = 326ms</li>
               <li>	T = Ton + Toff  = 684 ms</li>
             </ol>
-            <h4>Observed value</h4>
+          </div>
+            <div class="">
+            <h4 style="text-align:center;">Observed value</h4>
             <ol>
               <li>Ton = 4 small divisions   = 400ms</li>
               <li>	Toff  = 3 small divisions = 300ms</li>
               <li>T = Ton + Toff  = 700 ms</li>
-              <p>Error = 16/700 * 100 = 2.258 % </p>
             </ol>
-            <img src="" alt="Pwm no pot output(DSO)">
-            <p>
+          </div>
+          </div>
+                <p style="text-align:center;">Error = 16/700 * 100 = 2.258 % </p>
+            <div class="exp2output">
+              <div class="">
+                <img class="exp2_output" src="images/pwm_breadboard_circuit.jpg" alt="pwm circuit">
+                <p>PWM Breadboard Circuit</p>
+              </div>
+              <div class="">
+                <img class="exp2_output" src="images/pwm_cro_output.jpg" alt="Pwm no pot output(DSO)">
+                <p>PWM DSO OutPut</p>
+              </div>
+            </div>
+<p>If we vary R2 by repalcing R2 with a potentiometer, then we can adjust the values of TOn and Tof.</p>
+<p>Now you can see the circuit along with the pcb of PWM using a potentiometer and the output are attached below.</p>
+<div class="">
+  <div class="">
+    <img src="" alt="ciruit diagram">
+    <img src="" alt="pcb">
+  </div>
+
+</div>
             <!-- The pictures are in order of the following : <br>
             1.	PWM circuit with fixed R2 <br>
             2.	Output square waveform of fig 1. <br>
@@ -506,16 +548,48 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             <h3 class="sub_heading">PCB Designs</h3>
 
               <p>After the implementations there are the PCB designs of the circuit along with the schematics of …...</p> <br>
-              <div class="">
-                <img src="" alt="no pot front">
-                <img src="" alt="no pot Rear">
+
+              <div class="exp2nopotpcb">
+                <div class="">
+                  <p>Without POT Front Side</p>
+                  <img src="images/pwm-nopot-pcb.jpg" alt="no pot front">
+                </div>
+                <div class="">
+                  <p>Without POT Rear Side</p>
+                  <img src="images/pmn-pcb-2.jpg" alt="no pot Rear">
+                </div>
               </div>
-              <div class="">
-                <img src="" alt="pot front">
-                <img src="" alt="pot rear">
+              <div id="carouselExample" class="carousel slide">
+                <div class="carousel-inner">
+                  <div class="carousel-item active">
+                    <img src="images/pwm_pcb_front.jpg" class="d-block w-100" alt="..." style="margin-left:30% ;width="600" height="450">
+                  </div>
+                  <div class="carousel-item">
+                    <img src="images/pwm_pcb_rear.jpg" class="d-block w-100" alt="..." style="margin-left:30% ; width="600" height="450">
+                  </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
               </div>
+
+              <!-- <div class="">
+                <div class="">
+                  <img src="" alt="pot front">
+
+                </div>
+                <div class="">
+                  <img src="" alt="pot rear">
+
+                </div>
+              </div> -->
             <h3 class="sub_heading">CRITAL ISSUES</h3>
-            <ol>
+            <ol style="padding-left:65px;">
               <li>Low tolerance of the lab equipment, it is essential to use high quality materials for more accurate output.</li>
               <li>Output voltage limitations – for loads that require high voltages, we need additional amplification or voltage regulator circuits.</li>
               <li>Output current limitations – output current of a few mA is not sufficient for most loads. We need additional buffer or driver circuits to boost the current output</li>
@@ -524,7 +598,7 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             <p>We have observed in the calculation table that our observed output is almost identical to the calculated values.<br>
             Hence, we conclude that our design and implementations were successful.<br>
             <p>We came to know that 555 Timer  can be used to generate PWM signals and find application in :</p>
-             <ol style="margin: 0;">
+             <ol style="margin: 0; padding-left:80px; padding-bottom:50px;">
                <li>Motor Speed control</li>
                <li>Light brightness control</li>
                <li>Power management</li>
@@ -536,8 +610,8 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
 
         <!-- <section id="experiment3"> -->
             <h1 class="heading">Experiment 3: Delay Timer</h1>
-            <p>Diagram of Delay Timer:</p>
-            <img src="delay_timer_diagram.jpg" alt="Delay Timer Diagram">
+
+
 
             <!-- Details of Delay_timer -->
 
@@ -548,27 +622,39 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             This external trigger is provided by connecting Trigger pin to the ground via a switch.
             The monostable working mode is depicted in the figure below.</p>
 
+            <div class="delaycircuit">
+              <img src="images/delay_timer_circuit.jpg" alt="Delay Timer Diagram">
+              <p class="center">Delay Circuit</p>
+
+            </div>
+
             <h2 class="sub_heading">Principles of operation</h2>
-            <p>
-            Delay timer is activated by pressing the push button switch. <br>
-            1.	0 Volt is applied at pin 2(Trigger) via a switch. <br>
-            2.	Voltage at pin 2 < 1/3 Vcc -> output turns on. </p>
-            <p>
-            Discharge pin is disconnected simultaneously, internally from 0 V.
-            3.	Now the capacitor starts to charge via the resistance or the potentiometer via the +ve rail. <br>
-            4.	Threshold(pin 6) connected to the +ve terminal of the capacitor actively monitors the voltage across it. <br>
-            5.	Capacitor charges from 0 V to 2/3 Vcc -> Pin 6 turns off. <br>
-            6.	The time elapsed while the capacitor charges from 0 V to 2/3 Vcc is called the ‘Delay time’. <br>
-            7.	As soon as Pin 6(output) turns off, Pin 7 is internally connected to 0 V and the capacitor discharges completely. <br>
-            These steps are repeated every time the switch is pressed.</p>
+            <p>Delay timer is activated by pressing the push button switch. </p>
+            <ul class="paddingextra">
+              <li>0 Volt is applied at pin 2(Trigger) via a switch.</li>
+              <li>Voltage at pin 2 < 1/3 Vcc -> output turns on.</li>
+            </ul>
+
+            <p>Discharge pin is disconnected simultaneously, internally from 0 V.</p>
+            <ul class="paddingextra">
+              <li>Now the capacitor starts to charge via the resistance or the potentiometer via the +ve rail.</li>
+              <li>Threshold(pin 6) connected to the +ve terminal of the capacitor actively monitors the voltage across it.</li>
+              <li>Capacitor charges from 0 V to 2/3 Vcc -> Pin 6 turns off.</li>
+              <li>The time elapsed while the capacitor charges from 0 V to 2/3 Vcc is called the ‘Delay time’.</li>
+              <li>As soon as Pin 6(output) turns off, Pin 7 is internally connected to 0 V and the capacitor discharges completely.</li>
+            </ul>
+            <p>These steps are repeated every time the switch is pressed.</p>
 
             <h2 class="sub_heading">Calculations</h2>
-            <p>
-            Time taken by the capacitor to charge from 0 V to 2/3 Vcc is given by <br>
-                    T = 1.1 * R*C <br>
-            For the circuit we designed, we have chosen the following values.<br>
-            R = 22 k Ω <br>
-            C = 470 uF </p>
+            <p>Time taken by the capacitor to charge from 0 V to 2/3 Vcc is given by</p>
+            <ul class="paddingextra">
+              <li>T = 1.1 * R*C </li>
+            </ul>
+            <p>For the circuit we designed, we have chosen the following values.</p>
+            <ul class="paddingextra">
+              <li>R = 22 k Ω</li>
+              <li>C = 470 uF</li>
+            </ul>
             <h2>Calculated delay time</h2>
             <p>
 
@@ -579,8 +665,10 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             T = 13.37 s (stop clock value) <br>
 
             Error = (13.37-11.374)/11.374 = 17.54 % </p>
+            <img src="" alt="">
+            <img src="" alt="">
 
-            <h2>RESOURCE UTILISATION</h2>
+            <h2 class="center">RESOURCE UTILISATION</h2>
             <div id="table" class="">
 
 
@@ -608,7 +696,7 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             You can observe the circuit in the following part. <br>
             In the circuit, we have chosen a fixed capacitor of 470 uF (due to unavailability) and we have varied the resistance to obtain various timing delays. Some of the common time delays are : <br>
 
-            <table>
+            <table style="width:30%;">
               <thead>
                 <th>R (k Ω)</th>
                 <th>C (uF)</th>
@@ -625,46 +713,29 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             </p>
           </div>
             <h2 class="sub_heading">PCB design are below :</h2>
+            <div class="">
+              <img src="images/delay_timer_pcb_front.jpg" alt="pcb front">
+              <img src="images/delay_timer_pcb_rear.jpg" alt="pcb rear">
+            </div>
 
             <h2 class="sub_heading">Critical issues :</h2>
 
             <p>Problems encountered in the laboratory are :</p>
-             <p>
-               1. Component selection : unavailability of varying capacitance.<br>
-               2. Caliberation : Tedious process to caliberate the circuit properly to obtain perfect time delay.<br>
-               3. Circuit layout : Long traces or poor grounding can introduce noise and cause instability.<br>
-             </p>
+            <ol class="paddingextra">
+              <li>Component selection : unavailability of varying capacitance.</li>
+              <li>Caliberation : Tedious process to caliberate the circuit properly to obtain perfect time delay.</li>
+              <li>Circuit layout : Long traces or poor grounding can introduce noise and cause instability.</li>
+            </ol>
 
             <h2 class="sub_heading">Conclusion</h2>
             <p>We have observed that the time calculated theoretically and the stop-watch value is quite similar. Hence, we can conclude that the design is correct. However, its important to note the fact that error in our observation is due to the factors like component tolerance, external temperature and others.
             We also learnt that delay timer find application in various industries and electronics like : </p>
-            <p>
-              1. HVAC – Heating, ventilation and air-conditioning controls.<br>
-              2. Motor control – like that in a washing machine.<br>
-            </p>
-                a)	 <br>
-            b)	 </p>
-
+            <ol class="paddingextra" style="padding-bottom:50px;margin-bottom:0px;">
+              <li>HVAC – Heating, ventilation and air-conditioning controls.</li>
+              <li>Motor control – like that in a washing machine.</li>
+            </ol>
         <!-- </section> -->
         </div>
-
-        <section id="results">
-            <h2>Results</h2>
-
-            <!-- Results -->
-
-        </section>
-
-        <section id="conclusion">
-            <h2>Conclusion</h2>
-<!-- conclusion -->
-
-        </section>
-
-        <section id="references">
-            <h2>References</h2>
-
-        </section>
         </div>
     </main>
 
@@ -674,7 +745,7 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
 
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
+
 
 </body>
 </html>
