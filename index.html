@@ -158,8 +158,8 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
               <!-- <img class="ic_image" src="images/ic_image.jpg" alt="ic_image"> -->
             <p>Let us discuss the objectives </p>
               <ol>
-                <li>Smith trigger – Converts a sinusoidal or non-sinusoidal input waveform into a square waveform with a specify voltage threshold.</li>
-                <li>Pulse with modulation (PWM) - It controls the amount of power delivered to a load by varying the width of the output pulse.</li>
+                <li>Schmitt trigger – Converts a sinusoidal or non-sinusoidal input waveform into a square waveform with a specify voltage threshold.</li>
+                <li>Pulse width modulation (PWM) - It controls the amount of power delivered to a load by varying the width of the output pulse.</li>
                 <li>Delay timer circuit - Is a versatile timer circuit that can be used to create a variety of timing functions.</li>
               </ol>
         <!-- </section> -->
@@ -167,12 +167,12 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
 
         <!-- <section id="theory"> -->
 
-            <h2 class="theory_heading heading">Theory</h2>
+            <h1 class="theory_heading heading">Theory</h1>
 <div class="theory">
 
 
             <!-- <h1>All about 555 timer :</h1> -->
-            <p>The 555 timer is versatile and widely used integrated circuit that can be wise, widely used as a timer, oscillator and flip flop It was first introduced in 1971 by Cygnetics Corporation And is known as the time machine CMOS version of the circuit Like Motorola, MC1455 is widely used.The integrated circuit is a maze of transistors, transistors and dials. The figure below shows us the pin diagram of the IC. And now let us discuss the PINS.</p>
+            <p>The 555 timer is versatile and widely used integrated circuit that can be used widely used as a timer, oscillator and flip flop.It was first introduced in 1971 by Cygnetics Corporation and is known as the "IC time machine".CMOS version of the circuit Like Motorola MC1455 is widely used.The integrated circuit is a maze of transistors, transistors and diodes.The figure below shows us the pin diagram of the IC. And now let us discuss the PINS.</p>
           <div class="list_elemets">
 
 
@@ -272,7 +272,7 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
               <li>Reference voltage of pin 5 (2/3 Vcc) give external voltage to change pulse width</li>
               <li>Pin 4 is connected to Vcc through a resistor and give negative pulses to prevent reset.</li>
             </ul>
-            <p>Principles of operation <br>
+            <h2>Principles of operation </h2>
       <ol>
         <li>As R1=R2, voltage drop for both resistors will be Vcc/2.</li>
         <li>Initially for the first comparator,</li>
@@ -529,13 +529,20 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
               </div>
             </div>
 <p>If we vary R2 by repalcing R2 with a potentiometer, then we can adjust the values of TOn and Tof.</p>
-<p>Now you can see the circuit along with the pcb of PWM using a potentiometer and the output are attached below.</p>
-<div class="">
+<p>Now you can see the circuit along with the output of PWM using a potentiometer and the output are attached below.</p>
+<div class="pwmoutputpcb">
   <div class="">
-    <img src="" alt="ciruit diagram">
-    <img src="" alt="pcb">
+    <img src="images/pwmpotoutput1.jpeg" alt="ciruit diagram">
+    <p class="center">output</p>
   </div>
-
+  <div class="">
+    <img src="images/pwmoutput2.jpeg" alt="">
+    <p class="center">output</p>
+  </div>
+  <div class="">
+    <img src="images/pwmoutput3.jpeg" alt="">
+    <p class="center">output</p>
+  </div>
 </div>
             <!-- The pictures are in order of the following : <br>
             1.	PWM circuit with fixed R2 <br>
@@ -559,24 +566,25 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
                   <img src="images/pmn-pcb-2.jpg" alt="no pot Rear">
                 </div>
               </div>
-              <div id="carouselExample" class="carousel slide">
-                <div class="carousel-inner">
-                  <div class="carousel-item active">
-                    <img src="images/pwm_pcb_front.jpg" class="d-block w-100" alt="..." style="margin-left:30% ;width="600" height="450">
-                  </div>
-                  <div class="carousel-item">
-                    <img src="images/pwm_pcb_rear.jpg" class="d-block w-100" alt="..." style="margin-left:30% ; width="600" height="450">
-                  </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
-                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
-                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                  <span class="visually-hidden">Next</span>
-                </button>
-              </div>
+              <div id="carouselExample" class="carousel slide " style="width:50%;">
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="images/pwm_pcb_front.jpg" class="d-block w-100" alt="..." style="height:500px;">
+    </div>
+    <div class="carousel-item">
+      <img src="images/pwm_pcb_rear.jpg" class="d-block w-100" alt="...">
+    </div>
+
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
 
               <!-- <div class="">
                 <div class="">
@@ -633,9 +641,8 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             <ul class="paddingextra">
               <li>0 Volt is applied at pin 2(Trigger) via a switch.</li>
               <li>Voltage at pin 2 < 1/3 Vcc -> output turns on.</li>
+              <li>Discharge pin is disconnected simultaneously, internally from 0 V.</li>
             </ul>
-
-            <p>Discharge pin is disconnected simultaneously, internally from 0 V.</p>
             <ul class="paddingextra">
               <li>Now the capacitor starts to charge via the resistance or the potentiometer via the +ve rail.</li>
               <li>Threshold(pin 6) connected to the +ve terminal of the capacitor actively monitors the voltage across it.</li>
@@ -646,6 +653,10 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             <p>These steps are repeated every time the switch is pressed.</p>
 
             <h2 class="sub_heading">Calculations</h2>
+            <div class="delaycalculations">
+              <div class="">
+
+
             <p>Time taken by the capacitor to charge from 0 V to 2/3 Vcc is given by</p>
             <ul class="paddingextra">
               <li>T = 1.1 * R*C </li>
@@ -655,19 +666,29 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
               <li>R = 22 k Ω</li>
               <li>C = 470 uF</li>
             </ul>
-            <h2>Calculated delay time</h2>
-            <p>
-
-            T = 1.1 * 22 * 103 * 470 * 10-6 <br>
-            = 11.374 s <br>
+            </div>
+            <div class="">
+            <h4 class="center">Calculated delay time</h4>
+            <p>T = 1.1 * 22 * 103 * 470 * 10-6 </p>
+            <p>= 11.374 s</p>
+             <p>
                     	Observed delay time <br>
 
             T = 13.37 s (stop clock value) <br>
 
             Error = (13.37-11.374)/11.374 = 17.54 % </p>
-            <img src="" alt="">
-            <img src="" alt="">
-
+            </div>
+          </div>
+     <div class="delayouput">
+       <div class="">
+         <img src="images/delayoutput.jpg" alt="">
+         <p class="center">ouput</p>
+       </div>
+       <div class="">
+         <img src="images/delayoutput2.jpg" alt="">
+         <p class="center">output</p>
+       </div>
+     </div>
             <h2 class="center">RESOURCE UTILISATION</h2>
             <div id="table" class="">
 
@@ -713,9 +734,15 @@ background-image: linear-gradient(315deg, #fde7f9 0%, #aacaef 74%);
             </p>
           </div>
             <h2 class="sub_heading">PCB design are below :</h2>
-            <div class="">
-              <img src="images/delay_timer_pcb_front.jpg" alt="pcb front">
-              <img src="images/delay_timer_pcb_rear.jpg" alt="pcb rear">
+            <div class="delaypcb">
+              <div class="">
+                <img src="images/delay_timer_pcb_front.jpg" alt="pcb front">
+                <p class="center">PCB Front Side</p>
+              </div>
+              <div class="">
+                <img src="images/delay_timer_pcb_rear.jpg" alt="pcb rear">
+                <p class="center">PCB Rear Side</p>
+              </div>
             </div>
 
             <h2 class="sub_heading">Critical issues :</h2>
