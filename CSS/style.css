@@ -44,7 +44,9 @@ h2 {
 
 
 
-
+#first_back{
+  margin-top: 4.7rem;
+}
 
 
 
@@ -88,14 +90,18 @@ nav ul li a:hover {
   padding: 20px 10px 20px 0px;
   background-color: #28a7e9;
   transition: all ease 0.4s;
+  top: 0;
+  position: fixed;
+  width: 100%;
+  z-index: 10000;
 }
 .navbar-brand{
   font-size: 22px;
-  color: white !important;
+  color: black!important;
 }
 .navbar .navbar-nav li a{
   font-size: 16px;
-  color: white;
+  color: black;
 }
 
 /* Animation */
@@ -137,6 +143,7 @@ footer {
   line-height:1.25;
   font-size: 1.25rem;
   padding: 30px 50px;
+  
 }
 
 .ic_image{
@@ -336,11 +343,6 @@ z-index: 0;
   text-decoration-line: underline;
 }
 
-#exp_1 p{
-
-
-}
-
 
 
 
@@ -366,6 +368,9 @@ z-index: 0;
 
 }
 
+
+
+
 #exp_2 p{
   /* text-align: center; */
   padding-left: 3rem;
@@ -380,6 +385,11 @@ z-index: 0;
 }
 #exp_2 li{
   font-size: 1.25rem;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(100%);
 }
 
 
